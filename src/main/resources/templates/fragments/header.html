@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body>
+	<header th:fragment="cabecalho">
+		<nav class="navbar navbar-inverse navbar navbar-dark bg-dark fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="btn btn-dark navbar-toggle pull-left">
+						<i class="oi oi-menu"></i>
+					</button>
+					<a class="navbar-brand " href="#">Projeto Emprestimo</a>
+				</div>
+			<form class="form-inline mt-2 mt-md-0" sec:authorize="!isAuthenticated()">
+					<div class="form-check mb-2 mr-sm-2">
+						<a class="btn btn-outline-success my-2 my-sm-0" role="button"
+							th:href="@{/login}">Login</a>
+					</div>
+
+					<div class="form-check mb-2 mr-sm-2">
+						<a class="btn btn-outline-success my-2 my-sm-0" role="button"
+							th:href="@{/}">Cadastrar-se</a>
+					</div>
+				</form>
+			</div>
+		</nav>
+	</header>
+</body>
+</html>
